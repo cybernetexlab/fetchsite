@@ -3,8 +3,9 @@
 async function handler(request) {
   let GET = request['url'];
 
-  if (GET.includes('=') === false) GET = '=nasa.gov';
-  const domain = GET.split('=')[1];
+  const isClientURI = GET.includes('=');
+  if (isClientURI === false) GET = '=nasa.gov';
+  const domain = GET.split('=')[1]; //www.site.com/?req=domain
   const url = `http://${domain}`;
   const fetchResponse = await fetch(url);
   const html = await fetchResponse.text();
