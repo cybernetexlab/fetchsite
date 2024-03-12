@@ -1,6 +1,6 @@
 // Fetch microservice
 
-async function controller(request) {
+async function handler(request) {
   let GET = request['url'];
 
   if (GET.includes('=') === false) GET = '=nasa.gov';
@@ -16,4 +16,4 @@ async function controller(request) {
   });
 }
 
-Deno.serve(controller, { port: 8080 });
+Deno.serve(handler, { port: 8080 });
