@@ -4,8 +4,8 @@ async function controller(request) {
   let GET = request['url'];
 
   if (GET.includes('=') === false) GET = '=nasa.gov';
-  const address = GET.split('=')[1];
-  const url = `http://${address}`;
+  const domain = GET.split('=')[1];
+  const url = `http://${domain}`;
   const fetchResponse = await fetch(url);
   const html = await fetchResponse.text();
 
