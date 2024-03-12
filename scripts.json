@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "server": {
+      "url": "./src/server.js",
+      "permissions": [
+        "allow-read",
+        "allow-write",
+        "allow-run",
+        "allow-net"
+      ],
+      "args": []
+    }
+  }
+}
