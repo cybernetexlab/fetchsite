@@ -1,7 +1,6 @@
 {
   "compilerOptions": {},
   "importMap": "./imports.json",
-  "include": ["./src/"],
   "fmt": {
     "singleQuote": true,
     "useTabs": false,
