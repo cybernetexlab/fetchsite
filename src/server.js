@@ -1,5 +1,18 @@
 // Fetch microservice
 
+const CURRENT = Deno.version.deno;
+
+const SUPPORT = {
+  '1.41.2': true,
+};
+
+const print = (...critical) => console.log([...critical].join(''));
+
+if (!SUPPORT[CURRENT]) {
+  print('Tested on Deno version: ', ...Object.keys(SUPPORT));
+  print('You have installed ', CURRENT);
+}
+
 const handler = async (request) => {
   let GET = request['url'];
 
