@@ -19,4 +19,4 @@ const handler = async (request) => {
   }
 };
 
-Deno.serve(handler, { port: 8000 });
+Deno.serve({ port: 3000 }, handler);
