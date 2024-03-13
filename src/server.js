@@ -19,7 +19,7 @@ const handler = async (request) => {
   const isClientURI = GET.includes('=');
   if (isClientURI === false) GET = '=nasa.gov';
   const domain = GET.split('=')[1]; // microservice.dev/?req=domain
-  const url = `http://${domain}`;
+  const url = 'http://'.concat(domain);
 
   try {
     const fetchResponse = await fetch(url);
