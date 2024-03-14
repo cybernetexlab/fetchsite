@@ -1,9 +1,25 @@
 {
-  "compilerOptions": {},
-  "importMap": "./imports.json",
+  "imports": {
+    "std/": "https://deno.land/std@0.219.0/"
+  },
+  "tasks": {
+    "dev": "deno run -A --watch src/server.js",
+    "run": "deno run --allow-read --allow-write --allow-run --allow-net src/server.js"
+  },
+  "compilerOptions": {
+    "lib": ["webworker"]
+  },
   "fmt": {
+    "exclude": ["dist/"],
+    "include": ["."],
+    "semiColons": true,
     "singleQuote": true,
     "useTabs": false,
     "lineWidth": 120
+  },
+  "lint": {
+    "include": ["src/"],
+    "exclude": ["src/exclude/**/*.ts", "dist/"],
+    "rules": {}
   }
 }
