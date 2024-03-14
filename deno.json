@@ -19,7 +19,7 @@
   },
   "lint": {
     "include": ["src/"],
-    "exclude": ["src/exclude/**/*.ts", "dist/"],
+    "exclude": ["exclude/**/*.ts", "dist/"],
     "rules": {}
   }
 }
